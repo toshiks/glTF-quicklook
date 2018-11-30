@@ -10,7 +10,42 @@
 		2744673121B1F39100E8338E /* GenerateThumbnailForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */; };
 		2744673321B1F39100E8338E /* GeneratePreviewForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.c */; };
 		2744673521B1F39100E8338E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673421B1F39100E8338E /* main.c */; };
+		2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; };
+		2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; };
+		2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2744674421B1F94300E8338E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2744674021B1F94300E8338E /* GLTF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83D6FF481F48BB3A00F71E0C;
+			remoteInfo = GLTF;
+		};
+		2744674A21B1F95100E8338E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83A2D6E91F9961AC00FB8874;
+			remoteInfo = GLTFSCN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2744674E21B1FA1100E8338E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */,
+				2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +53,8 @@
 		2744673221B1F39100E8338E /* GeneratePreviewForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GeneratePreviewForURL.c; sourceTree = "<group>"; };
 		2744673421B1F39100E8338E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2744673621B1F39100E8338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2744674021B1F94300E8338E /* GLTF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTF.xcodeproj; path = GLTFKit/Framework/GLTF/GLTF.xcodeproj; sourceTree = "<group>"; };
+		2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTFSCN.xcodeproj; path = GLTFKit/Framework/GLTFSCN/GLTFSCN.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */,
+				2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +75,7 @@
 			children = (
 				2744672F21B1F39100E8338E /* glTF-qucklook */,
 				2744672E21B1F39100E8338E /* Products */,
+				2744673F21B1F94300E8338E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +96,31 @@
 				2744673621B1F39100E8338E /* Info.plist */,
 			);
 			path = "glTF-qucklook";
+			sourceTree = "<group>";
+		};
+		2744673F21B1F94300E8338E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */,
+				2744674021B1F94300E8338E /* GLTF.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2744674121B1F94300E8338E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2744674521B1F94300E8338E /* GLTF.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2744674721B1F95100E8338E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2744674B21B1F95100E8338E /* GLTFSCN.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +144,7 @@
 				2744672921B1F39100E8338E /* Sources */,
 				2744672A21B1F39100E8338E /* Frameworks */,
 				2744672B21B1F39100E8338E /* Resources */,
+				2744674E21B1FA1100E8338E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -113,12 +179,39 @@
 			mainGroup = 2744672321B1F39100E8338E;
 			productRefGroup = 2744672E21B1F39100E8338E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2744674121B1F94300E8338E /* Products */;
+					ProjectRef = 2744674021B1F94300E8338E /* GLTF.xcodeproj */;
+				},
+				{
+					ProductGroup = 2744674721B1F95100E8338E /* Products */;
+					ProjectRef = 2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2744672C21B1F39100E8338E /* glTF-qucklook */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2744674521B1F94300E8338E /* GLTF.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTF.framework;
+			remoteRef = 2744674421B1F94300E8338E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2744674B21B1F95100E8338E /* GLTFSCN.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTFSCN.framework;
+			remoteRef = 2744674A21B1F95100E8338E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2744672B21B1F39100E8338E /* Resources */ = {
