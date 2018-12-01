@@ -36,13 +36,97 @@ void setAnimations(SCNScene *scene, GLTFSCNAsset *scnAsset) {
     }
 }
 
+void setErrorScene(SCNScene *scene) {
+#if DEBUG
+    NSLog(@"Error Scene");
+#endif
+    SCNBox *geometry = [[SCNBox alloc] init];
+    geometry.firstMaterial.diffuse.contents = [NSColor redColor];
+    
+    SCNNode *node = [[SCNNode alloc] init];
+    [node setGeometry:geometry];
+    
+    [scene.rootNode addChildNode:node];
+    
+#if DEBUG
+    NSLog(@"Error scene %@", scene);
+#endif
+}
+
+void setCompanyLogo(SCNScene *scene) {
+    
+}
+
+bool checkNodes(NSArray* nds) {
+    if (nds == nil){
+        return true;
+    }
+    
+    if (nds.count == 0) {
+        return true;
+    }
+    
+    for (GLTFNode *node in nds){
+        for (GLTFSubmesh *mesh in node.mesh.submeshes) {
+            for (NSString *nameAttrib in mesh.accessorsForAttributes.allKeys) {
+                
+                if (mesh.accessorsForAttributes[nameAttrib] == nil) {
+                    return false;
+                }
+                
+                if (mesh.accessorsForAttributes[nameAttrib].bufferView == nil) {
+                    return false;
+                }
+                
+                if (mesh.accessorsForAttributes[nameAttrib].bufferView.buffer == nil) {
+                    return false;
+                }
+                
+                if (mesh.accessorsForAttributes[nameAttrib].bufferView.buffer.length == 0) {
+                    return false;
+                }
+            }
+        }
+        
+        if (!checkNodes(node.children)){
+            return false;
+        }
+    }
+    
+    return true;
+}
+
+bool checkScenes (NSArray* scns) {
+    for (GLTFScene *scene in scns){
+        if (!checkNodes(scene.nodes))
+            return false;
+    }
+    return true;
+}
+
+
 CFDataRef sceneByURL(NSURL* url) {
+    SCNScene *scene = nil;
+    
     id<GLTFBufferAllocator> bufferAllocator = [[GLTFDefaultBufferAllocator alloc] init];
     GLTFAsset *asset = [[GLTFAsset alloc] initWithURL:url bufferAllocator:bufferAllocator];
-    GLTFSCNAsset *scnAsset = [SCNScene assetFromGLTFAsset:asset options:@{}];
-    SCNScene *scene = scnAsset.defaultScene;
-    
-    setAnimations(scene, scnAsset);
+    if (!checkScenes(asset.scenes)) {
+        scene = [SCNScene scene];
+        setErrorScene(scene);
+    } else {
+        GLTFSCNAsset *scnAsset = [SCNScene assetFromGLTFAsset:asset options:@{}];
+        scene = scnAsset.defaultScene;
+        setAnimations(scene, scnAsset);
+    }
+        
+#if DEBUG
+        NSLog(@"%@", scene);
+#endif
+    setCompanyLogo(scene);
+
+#if DEBUG
+    NSLog(@"Finish create Scene");
+#endif
     
     return archivedScene(scene);
 }
