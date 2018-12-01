@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2744673121B1F39100E8338E /* GenerateThumbnailForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */; };
-		2744673321B1F39100E8338E /* GeneratePreviewForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.c */; };
+		2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */; };
+		2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.m */; };
 		2744673521B1F39100E8338E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673421B1F39100E8338E /* main.c */; };
 		2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; };
 		2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; };
@@ -38,7 +38,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
 				2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */,
 				2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */,
@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GenerateThumbnailForURL.c; sourceTree = "<group>"; };
-		2744673221B1F39100E8338E /* GeneratePreviewForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GeneratePreviewForURL.c; sourceTree = "<group>"; };
+		2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		2744673221B1F39100E8338E /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		2744673421B1F39100E8338E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2744673621B1F39100E8338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2744674021B1F94300E8338E /* GLTF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTF.xcodeproj; path = GLTFKit/Framework/GLTF/GLTF.xcodeproj; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		2744672F21B1F39100E8338E /* glTF-qucklook */ = {
 			isa = PBXGroup;
 			children = (
-				2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */,
-				2744673221B1F39100E8338E /* GeneratePreviewForURL.c */,
+				2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */,
+				2744673221B1F39100E8338E /* GeneratePreviewForURL.m */,
 				2744673421B1F39100E8338E /* main.c */,
 				2744673621B1F39100E8338E /* Info.plist */,
 			);
@@ -228,8 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2744673121B1F39100E8338E /* GenerateThumbnailForURL.c in Sources */,
-				2744673321B1F39100E8338E /* GeneratePreviewForURL.c in Sources */,
+				2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */,
+				2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */,
 				2744673521B1F39100E8338E /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +240,7 @@
 		2744673721B1F39100E8338E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -299,6 +300,7 @@
 		2744673821B1F39100E8338E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -354,8 +356,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -368,8 +373,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;

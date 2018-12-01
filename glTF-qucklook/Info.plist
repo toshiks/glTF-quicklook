@@ -10,12 +10,11 @@
 				<string>public.3d-content</string>
 			</array>
 			<key>UTTypeIdentifier</key>
-			<string>gltf.type.json</string>
+			<string>dyn.ah62d4rv4ge80s5dyq2</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
-					<string>glb</string>
 					<string>gltf</string>
 				</array>
 			</dict>
@@ -30,7 +29,7 @@
 			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>gltf.type.json</string>
+				<string>dyn.ah62d4rv4ge80s5dyq2</string>
 			</array>
 		</dict>
 	</array>
