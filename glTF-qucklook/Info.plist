@@ -10,6 +10,21 @@
 				<string>public.3d-content</string>
 			</array>
 			<key>UTTypeIdentifier</key>
+			<string>dyn.ah62d4rv4ge80s5dc</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>gld</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.3d-content</string>
+			</array>
+			<key>UTTypeIdentifier</key>
 			<string>dyn.ah62d4rv4ge80s5dyq2</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
@@ -29,6 +44,7 @@
 			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
+				<string>dyn.ah62d4rv4ge80s5dc</string>
 				<string>dyn.ah62d4rv4ge80s5dyq2</string>
 			</array>
 		</dict>

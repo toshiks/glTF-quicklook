@@ -2,8 +2,10 @@
 #include <CoreServices/CoreServices.h>
 #include <QuickLook/QuickLook.h>
 
-#import <SceneKit/SceneKit.h>
+#import "GLTFErrorCheckerByJSON.h"
+#import "GLTFErrorCheckerByScenes.h"
 
+@import SceneKit;
 @import GLTF;
 @import GLTFSCN;
 
@@ -57,60 +59,23 @@ void setCompanyLogo(SCNScene *scene) {
     
 }
 
-bool checkNodes(NSArray* nds) {
-    if (nds == nil){
-        return true;
-    }
-    
-    if (nds.count == 0) {
-        return true;
-    }
-    
-    for (GLTFNode *node in nds){
-        for (GLTFSubmesh *mesh in node.mesh.submeshes) {
-            for (NSString *nameAttrib in mesh.accessorsForAttributes.allKeys) {
-                
-                if (mesh.accessorsForAttributes[nameAttrib] == nil) {
-                    return false;
-                }
-                
-                if (mesh.accessorsForAttributes[nameAttrib].bufferView == nil) {
-                    return false;
-                }
-                
-                if (mesh.accessorsForAttributes[nameAttrib].bufferView.buffer == nil) {
-                    return false;
-                }
-                
-                if (mesh.accessorsForAttributes[nameAttrib].bufferView.buffer.length == 0) {
-                    return false;
-                }
-            }
-        }
-        
-        if (!checkNodes(node.children)){
-            return false;
-        }
-    }
-    
-    return true;
-}
-
-bool checkScenes (NSArray* scns) {
-    for (GLTFScene *scene in scns){
-        if (!checkNodes(scene.nodes))
-            return false;
-    }
-    return true;
-}
-
 
 CFDataRef sceneByURL(NSURL* url) {
     SCNScene *scene = nil;
     
+    if (![GR isGoodGLTFByName:url.path.UTF8String]) {
+        scene = [SCNScene scene];
+        setErrorScene(scene);
+        setCompanyLogo(scene);
+        
+        return archivedScene(scene);
+    }
+    
+    
     id<GLTFBufferAllocator> bufferAllocator = [[GLTFDefaultBufferAllocator alloc] init];
     GLTFAsset *asset = [[GLTFAsset alloc] initWithURL:url bufferAllocator:bufferAllocator];
-    if (!checkScenes(asset.scenes)) {
+    
+    if (asset == nil || ![GLTFErrorCheckerByScenes isGoodGLTFByScenes:asset.scenes]) {
         scene = [SCNScene scene];
         setErrorScene(scene);
     } else {
@@ -118,15 +83,8 @@ CFDataRef sceneByURL(NSURL* url) {
         scene = scnAsset.defaultScene;
         setAnimations(scene, scnAsset);
     }
-        
-#if DEBUG
-        NSLog(@"%@", scene);
-#endif
+    
     setCompanyLogo(scene);
-
-#if DEBUG
-    NSLog(@"Finish create Scene");
-#endif
     
     return archivedScene(scene);
 }
@@ -135,9 +93,6 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 {
     // To complete your generator please implement the function GeneratePreviewForURL in GeneratePreviewForURL.c
     @autoreleasepool {
-#if DEBUG
-        NSLog(@"Start");
-#endif
         
         if(QLPreviewRequestIsCancelled(preview)){
             return noErr;

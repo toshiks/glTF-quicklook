@@ -14,6 +14,14 @@
 		2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; };
 		2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27C37BC421B367FE008CF713 /* GLTFErrorCheckerByJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */; };
+		27C37BC521B367FE008CF713 /* GLTFErrorCheckerByJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */; };
+		27C37BCD21B36F4E008CF713 /* json.hpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBB21B367AD008CF713 /* json.hpp */; };
+		27C37BCE21B36F4E008CF713 /* stb_image_write.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBD21B367AD008CF713 /* stb_image_write.h */; };
+		27C37BCF21B36F4E008CF713 /* stb_image.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBC21B367AD008CF713 /* stb_image.h */; };
+		27C37BD021B36F4E008CF713 /* tiny_gltf.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBA21B367AD008CF713 /* tiny_gltf.h */; };
+		27C37BD421B38688008CF713 /* GLTFErrorCheckerByScenes.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */; };
+		27C37BD521B38688008CF713 /* GLTFErrorCheckerByScenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		2744673621B1F39100E8338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2744674021B1F94300E8338E /* GLTF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTF.xcodeproj; path = GLTFKit/Framework/GLTF/GLTF.xcodeproj; sourceTree = "<group>"; };
 		2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTFSCN.xcodeproj; path = GLTFKit/Framework/GLTFSCN/GLTFSCN.xcodeproj; sourceTree = "<group>"; };
+		27C37BBA21B367AD008CF713 /* tiny_gltf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_gltf.h; sourceTree = "<group>"; };
+		27C37BBB21B367AD008CF713 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		27C37BBC21B367AD008CF713 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		27C37BBD21B367AD008CF713 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
+		27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLTFErrorCheckerByJSON.mm; sourceTree = "<group>"; };
+		27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTFErrorCheckerByJSON.h; sourceTree = "<group>"; };
+		27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTFErrorCheckerByScenes.h; sourceTree = "<group>"; };
+		27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLTFErrorCheckerByScenes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C37BCD21B36F4E008CF713 /* json.hpp in Frameworks */,
+				27C37BCE21B36F4E008CF713 /* stb_image_write.h in Frameworks */,
+				27C37BCF21B36F4E008CF713 /* stb_image.h in Frameworks */,
+				27C37BD021B36F4E008CF713 /* tiny_gltf.h in Frameworks */,
 				2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */,
 				2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */,
 			);
@@ -73,6 +93,7 @@
 		2744672321B1F39100E8338E = {
 			isa = PBXGroup;
 			children = (
+				2751218821B35B5200303620 /* tiny_gltf */,
 				2744672F21B1F39100E8338E /* glTF-qucklook */,
 				2744672E21B1F39100E8338E /* Products */,
 				2744673F21B1F94300E8338E /* Frameworks */,
@@ -94,6 +115,10 @@
 				2744673221B1F39100E8338E /* GeneratePreviewForURL.m */,
 				2744673421B1F39100E8338E /* main.c */,
 				2744673621B1F39100E8338E /* Info.plist */,
+				27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */,
+				27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */,
+				27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */,
+				27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */,
 			);
 			path = "glTF-qucklook";
 			sourceTree = "<group>";
@@ -123,6 +148,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2751218821B35B5200303620 /* tiny_gltf */ = {
+			isa = PBXGroup;
+			children = (
+				27C37BBB21B367AD008CF713 /* json.hpp */,
+				27C37BBD21B367AD008CF713 /* stb_image_write.h */,
+				27C37BBC21B367AD008CF713 /* stb_image.h */,
+				27C37BBA21B367AD008CF713 /* tiny_gltf.h */,
+			);
+			path = tiny_gltf;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -130,6 +166,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C37BD421B38688008CF713 /* GLTFErrorCheckerByScenes.h in Headers */,
+				27C37BC521B367FE008CF713 /* GLTFErrorCheckerByJSON.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */,
+				27C37BC421B367FE008CF713 /* GLTFErrorCheckerByJSON.mm in Sources */,
 				2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */,
 				2744673521B1F39100E8338E /* main.c in Sources */,
+				27C37BD521B38688008CF713 /* GLTFErrorCheckerByScenes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +393,21 @@
 		2744673A21B1F39100E8338E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -370,14 +417,20 @@
 		2744673B21B1F39100E8338E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
