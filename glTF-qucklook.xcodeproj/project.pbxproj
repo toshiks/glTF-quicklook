@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27077F9121B57DD00081C27D /* ErrorSymbol.scn in Resources */ = {isa = PBXBuildFile; fileRef = 27077F9021B57DC60081C27D /* ErrorSymbol.scn */; };
+		27077F9521B58C0D0081C27D /* SceneGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 27077F9321B58C0D0081C27D /* SceneGenerator.h */; };
+		27077F9621B58C0D0081C27D /* SceneGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27077F9421B58C0D0081C27D /* SceneGenerator.m */; };
 		2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */; };
 		2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.m */; };
 		2744673521B1F39100E8338E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673421B1F39100E8338E /* main.c */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		27077F9021B57DC60081C27D /* ErrorSymbol.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ErrorSymbol.scn; path = Resources/ErrorSymbol.scn; sourceTree = "<group>"; };
+		27077F9321B58C0D0081C27D /* SceneGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneGenerator.h; sourceTree = "<group>"; };
+		27077F9421B58C0D0081C27D /* SceneGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneGenerator.m; sourceTree = "<group>"; };
 		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		2744673221B1F39100E8338E /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */,
 				27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */,
 				27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */,
+				27077F9321B58C0D0081C27D /* SceneGenerator.h */,
+				27077F9421B58C0D0081C27D /* SceneGenerator.m */,
 			);
 			path = "glTF-qucklook";
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			files = (
 				27C37BD421B38688008CF713 /* GLTFErrorCheckerByScenes.h in Headers */,
 				27C37BC521B367FE008CF713 /* GLTFErrorCheckerByJSON.h in Headers */,
+				27077F9521B58C0D0081C27D /* SceneGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27077F9621B58C0D0081C27D /* SceneGenerator.m in Sources */,
 				2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */,
 				27C37BC421B367FE008CF713 /* GLTFErrorCheckerByJSON.mm in Sources */,
 				2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */,
