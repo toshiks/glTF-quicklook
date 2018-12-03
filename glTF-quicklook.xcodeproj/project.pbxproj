@@ -74,7 +74,7 @@
 		2707800521B5C9140081C27D /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = tinygltf/stb_image.h; sourceTree = "<group>"; };
 		2707800621B5C9140081C27D /* stb_image_write.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image_write.h; path = tinygltf/stb_image_write.h; sourceTree = "<group>"; };
 		2707800721B5C9140081C27D /* tiny_gltf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tiny_gltf.h; path = tinygltf/tiny_gltf.h; sourceTree = "<group>"; };
-		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2744672D21B1F39100E8338E /* glTF-quicklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-quicklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		2744673221B1F39100E8338E /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		2744673421B1F39100E8338E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				27077F9221B58AC50081C27D /* Resources */,
-				2744672F21B1F39100E8338E /* glTF-qucklook */,
+				2744672F21B1F39100E8338E /* glTF-quicklook */,
 				2744672E21B1F39100E8338E /* Products */,
 				2744673F21B1F94300E8338E /* Frameworks */,
 			);
@@ -125,12 +125,12 @@
 		2744672E21B1F39100E8338E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */,
+				2744672D21B1F39100E8338E /* glTF-quicklook.qlgenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2744672F21B1F39100E8338E /* glTF-qucklook */ = {
+		2744672F21B1F39100E8338E /* glTF-quicklook */ = {
 			isa = PBXGroup;
 			children = (
 				2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */,
@@ -148,7 +148,7 @@
 				27077FD321B5B24B0081C27D /* SCNScene+BoundingBox.h */,
 				27077FD421B5B24B0081C27D /* SCNScene+BoundingBox.m */,
 			);
-			path = "glTF-qucklook";
+			path = "glTF-quicklook";
 			sourceTree = "<group>";
 		};
 		2744673F21B1F94300E8338E /* Frameworks */ = {
@@ -198,9 +198,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2744672C21B1F39100E8338E /* glTF-qucklook */ = {
+		2744672C21B1F39100E8338E /* glTF-quicklook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2744673921B1F39100E8338E /* Build configuration list for PBXNativeTarget "glTF-qucklook" */;
+			buildConfigurationList = 2744673921B1F39100E8338E /* Build configuration list for PBXNativeTarget "glTF-quicklook" */;
 			buildPhases = (
 				2744672821B1F39100E8338E /* Headers */,
 				2744672921B1F39100E8338E /* Sources */,
@@ -212,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = "glTF-qucklook";
+			name = "glTF-quicklook";
 			productName = "glTF-qucklook";
-			productReference = 2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */;
+			productReference = 2744672D21B1F39100E8338E /* glTF-quicklook.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2744672721B1F39100E8338E /* Build configuration list for PBXProject "glTF-qucklook" */;
+			buildConfigurationList = 2744672721B1F39100E8338E /* Build configuration list for PBXProject "glTF-quicklook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,7 +254,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				2744672C21B1F39100E8338E /* glTF-qucklook */,
+				2744672C21B1F39100E8338E /* glTF-quicklook */,
 			);
 		};
 /* End PBXProject section */
@@ -432,7 +432,7 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INPUT_FILETYPE = automatic;
-				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/glTF-quicklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +456,7 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INPUT_FILETYPE = automatic;
-				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/glTF-quicklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
@@ -469,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2744672721B1F39100E8338E /* Build configuration list for PBXProject "glTF-qucklook" */ = {
+		2744672721B1F39100E8338E /* Build configuration list for PBXProject "glTF-quicklook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2744673721B1F39100E8338E /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2744673921B1F39100E8338E /* Build configuration list for PBXNativeTarget "glTF-qucklook" */ = {
+		2744673921B1F39100E8338E /* Build configuration list for PBXNativeTarget "glTF-quicklook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2744673A21B1F39100E8338E /* Debug */,
