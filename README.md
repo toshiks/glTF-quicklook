@@ -1,14 +1,14 @@
-# glTF-qucklook
+# glTF-quicklook
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7d3aad2754eb4ef2adb1cbf2dcc050da)](https://www.codacy.com/app/toshiks/glTF-qucklook?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=toshiks/glTF-qucklook&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7d3aad2754eb4ef2adb1cbf2dcc050da)](https://www.codacy.com/app/toshiks/glTF-quicklook?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=toshiks/glTF-qucklook&amp;utm_campaign=Badge_Grade)
 ![status](https://img.shields.io/badge/glTF-2%2E0-green.svg?style=flat)
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/toshiks/glTF-qucklook/blob/master/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/toshiks/glTF-quicklook/blob/master/LICENSE)
 
 Simple QuickLook plugin for previewing gltf-files on macOS
 
 ## Status
 
-v1.0 release(4 Dec, 2018)
+v1.0 release(3 Dec, 2018)
 
 ## System Requirements
 
@@ -18,7 +18,7 @@ v1.0 release(4 Dec, 2018)
 
 ### Manually
 
-1. Download **glTF-qucklook_vX.X.zip** from [Releases](https://github.com/toshiks/glTF-qucklook/releases/latest).
+1. Download **glTF-qucklook_vX.X.zip** from [Releases](https://github.com/toshiks/glTF-quicklook/releases/latest).
 2. Put **glTF-qucklook.qlgenerator** from zip file into 
     1. `/Library/QuickLook` - for all users;
     2. `~/Library/QuickLook` - only for the logged-in user.
