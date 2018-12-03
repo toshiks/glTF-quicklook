@@ -437,7 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-quicklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
 			};
@@ -460,7 +460,7 @@
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-quicklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
 			};

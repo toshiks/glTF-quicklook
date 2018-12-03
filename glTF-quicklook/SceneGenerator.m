@@ -53,7 +53,7 @@
 #if DEBUG
     NSLog(@"Error Scene");
 #endif
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.ITS.glTF-qucklook"];
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.ITS.glTF-quicklook"];
     
     NSURL *urlFile =  [bundle URLForResource:@"ErrorSymbol" withExtension:@"scn"];
     

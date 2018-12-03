@@ -37,7 +37,7 @@
         cameraNode.camera.zFar = wz;
     }
     
-    cameraNode.position = SCNVector3Make((sceneMax.x + sceneMin.x) / 2, (sceneMax.y + sceneMin.y) / 2, sceneMax.z + dz);
+    cameraNode.position = SCNVector3Make((sceneMax.x + sceneMin.x) * 0.5, (sceneMax.y + sceneMin.y) * 0.5, sceneMax.z + dz);
     [scene.rootNode addChildNode:cameraNode];
     
     SCNView *view = [[SCNView alloc] initWithFrame:rect options:nil];
