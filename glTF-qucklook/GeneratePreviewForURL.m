@@ -38,35 +38,23 @@ void setAnimations(SCNScene *scene, GLTFSCNAsset *scnAsset) {
     }
 }
 
-void setErrorScene(SCNScene *scene) {
+void setErrorScene(SCNScene **scene) {
 #if DEBUG
     NSLog(@"Error Scene");
 #endif
-    SCNBox *geometry = [[SCNBox alloc] init];
-    geometry.firstMaterial.diffuse.contents = [NSColor redColor];
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.ITS.glTF-qucklook"];
     
-    SCNNode *node = [[SCNNode alloc] init];
-    [node setGeometry:geometry];
+    NSURL *urlFile =  [bundle URLForResource:@"ErrorSymbol" withExtension:@"scn"];
     
-    [scene.rootNode addChildNode:node];
-    
-#if DEBUG
-    NSLog(@"Error scene %@", scene);
-#endif
-}
-
-void setCompanyLogo(SCNScene *scene) {
-    
+    *scene = [SCNScene sceneWithURL:urlFile options:nil error:nil];
 }
 
 
-CFDataRef sceneByURL(NSURL* url) {
+CFDataRef sceneByURL(NSURL* url, QLPreviewRequestRef* preview) {
     SCNScene *scene = nil;
     
     if (![GR isGoodGLTFByName:url.path.UTF8String]) {
-        scene = [SCNScene scene];
-        setErrorScene(scene);
-        setCompanyLogo(scene);
+        setErrorScene(&scene);
         
         return archivedScene(scene);
     }
@@ -76,15 +64,13 @@ CFDataRef sceneByURL(NSURL* url) {
     GLTFAsset *asset = [[GLTFAsset alloc] initWithURL:url bufferAllocator:bufferAllocator];
     
     if (asset == nil || ![GLTFErrorCheckerByScenes isGoodGLTFByScenes:asset.scenes]) {
-        scene = [SCNScene scene];
-        setErrorScene(scene);
+        setErrorScene(&scene);
     } else {
         GLTFSCNAsset *scnAsset = [SCNScene assetFromGLTFAsset:asset options:@{}];
         scene = scnAsset.defaultScene;
         setAnimations(scene, scnAsset);
     }
     
-    setCompanyLogo(scene);
     
     return archivedScene(scene);
 }
@@ -102,7 +88,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
             return noErr;
         }
         
-        QLPreviewRequestSetDataRepresentation(preview, sceneByURL((__bridge NSURL*)url), kUTType3DContent, options);
+        QLPreviewRequestSetDataRepresentation(preview, sceneByURL((__bridge NSURL*)url, &preview), kUTType3DContent, options);
         
         return noErr;
     }

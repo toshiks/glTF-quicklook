@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27077F9121B57DD00081C27D /* ErrorSymbol.scn in Resources */ = {isa = PBXBuildFile; fileRef = 27077F9021B57DC60081C27D /* ErrorSymbol.scn */; };
 		2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */; };
 		2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.m */; };
 		2744673521B1F39100E8338E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673421B1F39100E8338E /* main.c */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27077F9021B57DC60081C27D /* ErrorSymbol.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ErrorSymbol.scn; path = Resources/ErrorSymbol.scn; sourceTree = "<group>"; };
 		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		2744673221B1F39100E8338E /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
@@ -90,9 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27077F9221B58AC50081C27D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27077F9021B57DC60081C27D /* ErrorSymbol.scn */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2744672321B1F39100E8338E = {
 			isa = PBXGroup;
 			children = (
+				27077F9221B58AC50081C27D /* Resources */,
 				2751218821B35B5200303620 /* tiny_gltf */,
 				2744672F21B1F39100E8338E /* glTF-qucklook */,
 				2744672E21B1F39100E8338E /* Products */,
@@ -256,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27077F9121B57DD00081C27D /* ErrorSymbol.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
