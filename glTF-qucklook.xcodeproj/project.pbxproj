@@ -7,17 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2744673121B1F39100E8338E /* GenerateThumbnailForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */; };
-		2744673321B1F39100E8338E /* GeneratePreviewForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.c */; };
+		27077F9121B57DD00081C27D /* ErrorSymbol.scn in Resources */ = {isa = PBXBuildFile; fileRef = 27077F9021B57DC60081C27D /* ErrorSymbol.scn */; };
+		27077FCD21B5A20C0081C27D /* SceneGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 27077F9321B58C0D0081C27D /* SceneGenerator.h */; };
+		27077FCE21B5A20C0081C27D /* SceneGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27077F9421B58C0D0081C27D /* SceneGenerator.m */; };
+		27077FD121B5AE330081C27D /* ThumbnailGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 27077FCF21B5AE330081C27D /* ThumbnailGenerator.h */; };
+		27077FD221B5AE330081C27D /* ThumbnailGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27077FD021B5AE330081C27D /* ThumbnailGenerator.m */; };
+		27077FD521B5B24B0081C27D /* SCNScene+BoundingBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 27077FD321B5B24B0081C27D /* SCNScene+BoundingBox.h */; };
+		27077FD621B5B24B0081C27D /* SCNScene+BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 27077FD421B5B24B0081C27D /* SCNScene+BoundingBox.m */; };
+		2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */; };
+		2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744673221B1F39100E8338E /* GeneratePreviewForURL.m */; };
 		2744673521B1F39100E8338E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2744673421B1F39100E8338E /* main.c */; };
+		2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; };
+		2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; };
+		2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674B21B1F95100E8338E /* GLTFSCN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744674521B1F94300E8338E /* GLTF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27C37BC421B367FE008CF713 /* GLTFErrorCheckerByJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */; };
+		27C37BC521B367FE008CF713 /* GLTFErrorCheckerByJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */; };
+		27C37BCD21B36F4E008CF713 /* json.hpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBB21B367AD008CF713 /* json.hpp */; };
+		27C37BCE21B36F4E008CF713 /* stb_image_write.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBD21B367AD008CF713 /* stb_image_write.h */; };
+		27C37BCF21B36F4E008CF713 /* stb_image.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBC21B367AD008CF713 /* stb_image.h */; };
+		27C37BD021B36F4E008CF713 /* tiny_gltf.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C37BBA21B367AD008CF713 /* tiny_gltf.h */; };
+		27C37BD421B38688008CF713 /* GLTFErrorCheckerByScenes.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */; };
+		27C37BD521B38688008CF713 /* GLTFErrorCheckerByScenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2744674421B1F94300E8338E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2744674021B1F94300E8338E /* GLTF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83D6FF481F48BB3A00F71E0C;
+			remoteInfo = GLTF;
+		};
+		2744674A21B1F95100E8338E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83A2D6E91F9961AC00FB8874;
+			remoteInfo = GLTFSCN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2744674E21B1FA1100E8338E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2744674F21B1FA1900E8338E /* GLTFSCN.framework in CopyFiles */,
+				2744675021B1FA1900E8338E /* GLTF.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		27077F9021B57DC60081C27D /* ErrorSymbol.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ErrorSymbol.scn; path = Resources/ErrorSymbol.scn; sourceTree = "<group>"; };
+		27077F9321B58C0D0081C27D /* SceneGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneGenerator.h; sourceTree = "<group>"; };
+		27077F9421B58C0D0081C27D /* SceneGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneGenerator.m; sourceTree = "<group>"; };
+		27077FCF21B5AE330081C27D /* ThumbnailGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThumbnailGenerator.h; sourceTree = "<group>"; };
+		27077FD021B5AE330081C27D /* ThumbnailGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThumbnailGenerator.m; sourceTree = "<group>"; };
+		27077FD321B5B24B0081C27D /* SCNScene+BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCNScene+BoundingBox.h"; sourceTree = "<group>"; };
+		27077FD421B5B24B0081C27D /* SCNScene+BoundingBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SCNScene+BoundingBox.m"; sourceTree = "<group>"; };
 		2744672D21B1F39100E8338E /* glTF-qucklook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glTF-qucklook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GenerateThumbnailForURL.c; sourceTree = "<group>"; };
-		2744673221B1F39100E8338E /* GeneratePreviewForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GeneratePreviewForURL.c; sourceTree = "<group>"; };
+		2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		2744673221B1F39100E8338E /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		2744673421B1F39100E8338E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2744673621B1F39100E8338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2744674021B1F94300E8338E /* GLTF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTF.xcodeproj; path = GLTFKit/Framework/GLTF/GLTF.xcodeproj; sourceTree = "<group>"; };
+		2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTFSCN.xcodeproj; path = GLTFKit/Framework/GLTFSCN/GLTFSCN.xcodeproj; sourceTree = "<group>"; };
+		27C37BBA21B367AD008CF713 /* tiny_gltf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiny_gltf.h; sourceTree = "<group>"; };
+		27C37BBB21B367AD008CF713 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		27C37BBC21B367AD008CF713 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		27C37BBD21B367AD008CF713 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_write.h; sourceTree = "<group>"; };
+		27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLTFErrorCheckerByJSON.mm; sourceTree = "<group>"; };
+		27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTFErrorCheckerByJSON.h; sourceTree = "<group>"; };
+		27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTFErrorCheckerByScenes.h; sourceTree = "<group>"; };
+		27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLTFErrorCheckerByScenes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +92,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C37BCD21B36F4E008CF713 /* json.hpp in Frameworks */,
+				27C37BCE21B36F4E008CF713 /* stb_image_write.h in Frameworks */,
+				27C37BCF21B36F4E008CF713 /* stb_image.h in Frameworks */,
+				27C37BD021B36F4E008CF713 /* tiny_gltf.h in Frameworks */,
+				2744674D21B1F95F00E8338E /* GLTFSCN.framework in Frameworks */,
+				2744674C21B1F95A00E8338E /* GLTF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27077F9221B58AC50081C27D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27077F9021B57DC60081C27D /* ErrorSymbol.scn */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2744672321B1F39100E8338E = {
 			isa = PBXGroup;
 			children = (
+				27077F9221B58AC50081C27D /* Resources */,
+				2751218821B35B5200303620 /* tiny_gltf */,
 				2744672F21B1F39100E8338E /* glTF-qucklook */,
 				2744672E21B1F39100E8338E /* Products */,
+				2744673F21B1F94300E8338E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,12 +134,58 @@
 		2744672F21B1F39100E8338E /* glTF-qucklook */ = {
 			isa = PBXGroup;
 			children = (
-				2744673021B1F39100E8338E /* GenerateThumbnailForURL.c */,
-				2744673221B1F39100E8338E /* GeneratePreviewForURL.c */,
+				2744673021B1F39100E8338E /* GenerateThumbnailForURL.m */,
+				2744673221B1F39100E8338E /* GeneratePreviewForURL.m */,
 				2744673421B1F39100E8338E /* main.c */,
 				2744673621B1F39100E8338E /* Info.plist */,
+				27C37BC221B367FE008CF713 /* GLTFErrorCheckerByJSON.mm */,
+				27C37BC321B367FE008CF713 /* GLTFErrorCheckerByJSON.h */,
+				27C37BD221B38688008CF713 /* GLTFErrorCheckerByScenes.h */,
+				27C37BD321B38688008CF713 /* GLTFErrorCheckerByScenes.m */,
+				27077F9321B58C0D0081C27D /* SceneGenerator.h */,
+				27077F9421B58C0D0081C27D /* SceneGenerator.m */,
+				27077FCF21B5AE330081C27D /* ThumbnailGenerator.h */,
+				27077FD021B5AE330081C27D /* ThumbnailGenerator.m */,
+				27077FD321B5B24B0081C27D /* SCNScene+BoundingBox.h */,
+				27077FD421B5B24B0081C27D /* SCNScene+BoundingBox.m */,
 			);
 			path = "glTF-qucklook";
+			sourceTree = "<group>";
+		};
+		2744673F21B1F94300E8338E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */,
+				2744674021B1F94300E8338E /* GLTF.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2744674121B1F94300E8338E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2744674521B1F94300E8338E /* GLTF.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2744674721B1F95100E8338E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2744674B21B1F95100E8338E /* GLTFSCN.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2751218821B35B5200303620 /* tiny_gltf */ = {
+			isa = PBXGroup;
+			children = (
+				27C37BBB21B367AD008CF713 /* json.hpp */,
+				27C37BBD21B367AD008CF713 /* stb_image_write.h */,
+				27C37BBC21B367AD008CF713 /* stb_image.h */,
+				27C37BBA21B367AD008CF713 /* tiny_gltf.h */,
+			);
+			path = tiny_gltf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +195,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C37BD421B38688008CF713 /* GLTFErrorCheckerByScenes.h in Headers */,
+				27077FD121B5AE330081C27D /* ThumbnailGenerator.h in Headers */,
+				27C37BC521B367FE008CF713 /* GLTFErrorCheckerByJSON.h in Headers */,
+				27077FCD21B5A20C0081C27D /* SceneGenerator.h in Headers */,
+				27077FD521B5B24B0081C27D /* SCNScene+BoundingBox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +214,7 @@
 				2744672921B1F39100E8338E /* Sources */,
 				2744672A21B1F39100E8338E /* Frameworks */,
 				2744672B21B1F39100E8338E /* Resources */,
+				2744674E21B1FA1100E8338E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -109,10 +245,21 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2744672321B1F39100E8338E;
 			productRefGroup = 2744672E21B1F39100E8338E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2744674121B1F94300E8338E /* Products */;
+					ProjectRef = 2744674021B1F94300E8338E /* GLTF.xcodeproj */;
+				},
+				{
+					ProductGroup = 2744674721B1F95100E8338E /* Products */;
+					ProjectRef = 2744674621B1F95100E8338E /* GLTFSCN.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2744672C21B1F39100E8338E /* glTF-qucklook */,
@@ -120,11 +267,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2744674521B1F94300E8338E /* GLTF.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTF.framework;
+			remoteRef = 2744674421B1F94300E8338E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2744674B21B1F95100E8338E /* GLTFSCN.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTFSCN.framework;
+			remoteRef = 2744674A21B1F95100E8338E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2744672B21B1F39100E8338E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27077F9121B57DD00081C27D /* ErrorSymbol.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2744673121B1F39100E8338E /* GenerateThumbnailForURL.c in Sources */,
-				2744673321B1F39100E8338E /* GeneratePreviewForURL.c in Sources */,
+				27077FCE21B5A20C0081C27D /* SceneGenerator.m in Sources */,
+				2744673121B1F39100E8338E /* GenerateThumbnailForURL.m in Sources */,
+				27077FD221B5AE330081C27D /* ThumbnailGenerator.m in Sources */,
+				27C37BC421B367FE008CF713 /* GLTFErrorCheckerByJSON.mm in Sources */,
+				2744673321B1F39100E8338E /* GeneratePreviewForURL.m in Sources */,
+				27077FD621B5B24B0081C27D /* SCNScene+BoundingBox.m in Sources */,
 				2744673521B1F39100E8338E /* main.c in Sources */,
+				27C37BD521B38688008CF713 /* GLTFErrorCheckerByScenes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +317,7 @@
 		2744673721B1F39100E8338E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -206,6 +377,7 @@
 		2744673821B1F39100E8338E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -258,11 +430,21 @@
 		2744673A21B1F39100E8338E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -272,11 +454,20 @@
 		2744673B21B1F39100E8338E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2G28BM99HR;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "glTF-qucklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-qucklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;

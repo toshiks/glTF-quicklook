@@ -2,6 +2,8 @@
 #include <CoreServices/CoreServices.h>
 #include <QuickLook/QuickLook.h>
 
+#include "SceneGenerator.h"
+
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options);
 void CancelPreviewGeneration(void *thisInterface, QLPreviewRequestRef preview);
 
@@ -13,7 +15,15 @@ void CancelPreviewGeneration(void *thisInterface, QLPreviewRequestRef preview);
 
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options)
 {
-    // To complete your generator please implement the function GeneratePreviewForURL in GeneratePreviewForURL.c
+    @autoreleasepool {
+        
+        if(QLPreviewRequestIsCancelled(preview)){
+            return noErr;
+        }
+        
+        QLPreviewRequestSetDataRepresentation(preview, [SceneGenerator sceneDataByURL:url], kUTType3DContent, options);
+    }
+    
     return noErr;
 }
 
