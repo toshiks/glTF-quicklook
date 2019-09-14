@@ -1,6 +1,3 @@
-[submodule "GLTFKit"]
-	path = GLTFKit
-	url = https://github.com/warrenm/GLTFKit.git
 [submodule "tinygltf"]
 	path = tinygltf
 	url = https://github.com/syoyo/tinygltf.git

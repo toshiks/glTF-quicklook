@@ -8,11 +8,8 @@
 
 #import "SceneGenerator.h"
 
-#import "GLTFErrorCheckerByJSON.h"
-#import "GLTFErrorCheckerByScenes.h"
-
-@import GLTF;
-@import GLTFSCN;
+#import "TinyGLTFSCN/TinyGLTFSCN.h"
+#import "TinyGLTFSCN/GLTFSCNAnimationTargetPair.h"
 
 @implementation SceneGenerator
 
@@ -25,22 +22,14 @@
 }
 
 + (SCNScene *)sceneByNSURL:(NSURL*)url {
-    SCNScene *scene = nil;
+    TinyGLTFSCN *loader = [[TinyGLTFSCN alloc] init];
     
-    if (![GR isGoodGLTFByName:url.path.UTF8String]) {
+    if (![loader loadModel:url]) {
         return [SceneGenerator errorScene];
     }
     
-    id<GLTFBufferAllocator> bufferAllocator = [[GLTFDefaultBufferAllocator alloc] init];
-    GLTFAsset *asset = [[GLTFAsset alloc] initWithURL:url bufferAllocator:bufferAllocator];
-    
-    if (asset == nil || ![GLTFErrorCheckerByScenes isGoodGLTFByScenes:asset.scenes]) {
-        return [SceneGenerator errorScene];
-    }
-    
-    GLTFSCNAsset *scnAsset = [SCNScene assetFromGLTFAsset:asset options:@{}];
-    scene = scnAsset.defaultScene;
-    [SceneGenerator setAnimationsToScene:scene scnAsset:scnAsset];
+    SCNScene *scene = loader.scenes[0];
+    [SceneGenerator enableAnimationsToScene:loader.animations];
     
     return scene;
 }
@@ -60,20 +49,20 @@
     return [SCNScene sceneWithURL:urlFile options:nil error:nil];
 }
 
-+ (void) setAnimationsToScene: (SCNScene*) scene scnAsset:(GLTFSCNAsset *)scnAsset {
-    NSDictionary *animations = scnAsset.animations;
-    
-    if (animations.count != 0) {
-        NSString *name = scnAsset.animations.allKeys.firstObject;
-#if DEBUG
-        NSLog(@"Animation name: %@", name);
-#endif
-        
-        [animations[name] enumerateObjectsUsingBlock:^(GLTFSCNAnimationTargetPair *pair, NSUInteger index, BOOL *stop) {
-            pair.animation.usesSceneTimeBase = NO;
-            [pair.target addAnimation:pair.animation forKey:nil];
-        }];
++ (void) enableAnimationsToScene:(NSDictionary *)animations {
+    if (animations.count == 0) {
+        return;
     }
+    
+    NSString *name = animations.allKeys.firstObject;
+#if DEBUG
+    NSLog(@"Animation name: %@", name);
+#endif
+    
+    [animations[name] enumerateObjectsUsingBlock:^(GLTFSCNAnimationTargetPair *pair, NSUInteger index, BOOL *stop) {
+        pair.animation.usesSceneTimeBase = NO;
+        [pair.target addAnimation:pair.animation forKey:nil];
+    }];
 }
 
 

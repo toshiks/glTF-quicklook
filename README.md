@@ -4,25 +4,35 @@
 ![status](https://img.shields.io/badge/glTF-2%2E0-green.svg?style=flat)
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/toshiks/glTF-quicklook/blob/master/LICENSE)
 
-Simple QuickLook plugin for previewing gltf-files on macOS
+Simple QuickLook plugin for previewing gltf-files on macOS.
 
 ## Status
 
-v1.0 release(3 Dec, 2018)
+v1.1 release(14 Sep, 2019)
+
+## Features
+* glTF specification v2.0.0
+* Draco compression format
+* Animations (not for Draco compression format)
+* Textures
 
 ## System Requirements
 
 - macOS 10.13 (High Sierra) or later
+- installed [Draco compression library](https://github.com/google/draco)
 
 ## Install
 
 ### Manually
 
-1. Download **glTF-qucklook_vX.X.zip** from [Releases](https://github.com/toshiks/glTF-quicklook/releases/latest).
-2. Put **glTF-qucklook.qlgenerator** from zip file into 
+1. In terminal run command: brew install draco@1.3.5
+2. Download **glTF-qucklook_vX.X.zip** from [Releases](https://github.com/toshiks/glTF-quicklook/releases/latest).
+3. Put **glTF-qucklook.qlgenerator** from zip file into 
     1. `/Library/QuickLook` - for all users;
     2. `~/Library/QuickLook` - only for the logged-in user.
-3. Run `qlmanage -r` command to reload QuickLook plugins.
+4. Run `qlmanage -r` command to reload QuickLook plugins.
+
+
 
 ## Licenses
 
