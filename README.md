@@ -16,6 +16,11 @@ v1.1 release(14 Sep, 2019)
 * Animations (not for Draco compression format)
 * Textures
 
+## Examples 
+
+![](examples/brainstem.gif)
+![](examples/scifihelmet.gif)
+
 ## System Requirements
 
 - macOS 10.13 (High Sierra) or later
@@ -25,7 +30,7 @@ v1.1 release(14 Sep, 2019)
 
 ### Manually
 
-1. In terminal run command: brew install draco@1.3.5
+1. In terminal run command: ```brew install draco```
 2. Download **glTF-qucklook_vX.X.zip** from [Releases](https://github.com/toshiks/glTF-quicklook/releases/latest).
 3. Put **glTF-qucklook.qlgenerator** from zip file into 
     1. `/Library/QuickLook` - for all users;
@@ -33,7 +38,10 @@ v1.1 release(14 Sep, 2019)
 4. Run `qlmanage -r` command to reload QuickLook plugins.
 
 
-
 ## Licenses
 
 glTF-qucklook is licensed under MIT license.
+
+## Third party licenses
+* [tiny-gltf](https://github.com/syoyo/tinygltf) - Copyright (c) 2017 Syoyo Fujita, Aurélien Chatelain
+* [GLTFKIT](https://github.com/warrenm/GLTFKit) - Copyright (c) 2017 Warren Moore
