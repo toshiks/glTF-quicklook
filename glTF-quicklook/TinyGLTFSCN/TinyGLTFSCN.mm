@@ -39,6 +39,24 @@ static SCNMatrix4 GLTFSCNMatrix4FromFloat4x4(GLTFMatrix4 m) {
     return mOut;
 }
 
+static simd_float4x4 simdFloat4x4FromVector16(const std::vector<double> &matrix) {
+    if (matrix.size() < 16) {
+        return {
+            simd_make_float4(1, 0, 0, 0),
+            simd_make_float4(0, 1, 0, 0),
+            simd_make_float4(0, 0, 1, 0),
+            simd_make_float4(0, 0, 0, 1)
+        };
+    }
+    
+    return {
+        simd_make_float4(matrix[0], matrix[1], matrix[2], matrix[3]),
+        simd_make_float4(matrix[4], matrix[5], matrix[6], matrix[7]),
+        simd_make_float4(matrix[8], matrix[9], matrix[10], matrix[11]),
+        simd_make_float4(matrix[12], matrix[13], matrix[14], matrix[15])
+    };
+}
+
 const std::string  GLTFAttributeSemanticPosition  = "POSITION";
 const std::string  GLTFAttributeSemanticTangent   = "TANGENT";
 const std::string  GLTFAttributeSemanticNormal    = "NORMAL";
@@ -333,6 +351,7 @@ NSInteger TinyGLTFComponentCountForDimension(NSInteger dimension) {
     const auto& rotation = node.rotation;
     const auto& scale = node.scale;
     const auto& translation = node.translation;
+    const auto& matrix = simdFloat4x4FromVector16(node.matrix);
     
     if (rotation.size() == 4) {
         _rotationQuaternion = simd_quaternion(float(rotation[0]), float(rotation[1]), float(rotation[2]), float(rotation[3]));
@@ -358,7 +377,7 @@ NSInteger TinyGLTFComponentCountForDimension(NSInteger dimension) {
     scaleMatrix.columns[1][1] = _scale[1];
     scaleMatrix.columns[2][2] = _scale[2];
     
-    return matrix_multiply(matrix_multiply(translationMatrix, rotationMatrix), scaleMatrix);
+    return matrix_multiply(matrix, matrix_multiply(matrix_multiply(translationMatrix, rotationMatrix), scaleMatrix));
 }
 
 - (void) recursiveAddNodeWithId: (NSInteger)nodeID toSCNNode:(SCNNode *)node fromModel: (const tinygltf::Model &)model {
