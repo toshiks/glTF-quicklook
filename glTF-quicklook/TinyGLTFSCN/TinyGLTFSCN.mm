@@ -447,7 +447,20 @@ NSInteger TinyGLTFComponentCountForDimension(NSInteger dimension) {
         const auto& indexBuffer = model.buffers[indexBufferView.buffer];
         
         SCNGeometryPrimitiveType primitiveType = TinyGLTFSCNGeometryPrimitiveTypeForPrimitiveType(submesh.mode);
-        NSInteger bytesPerIndex = (indexAccessor.componentType == TINYGLTF_COMPONENT_TYPE_UNSIGNED_SHORT) ? sizeof(uint16_t) : sizeof(uint32_t);
+        
+        // determine size of data referenced by this accessor
+        NSInteger bytesPerIndex = 0;
+        if (indexAccessor.componentType >= TINYGLTF_COMPONENT_TYPE_BYTE && indexAccessor.componentType <= TINYGLTF_COMPONENT_TYPE_UNSIGNED_BYTE)
+            bytesPerIndex = sizeof(uint8_t);
+        else if (indexAccessor.componentType >= TINYGLTF_COMPONENT_TYPE_SHORT && indexAccessor.componentType <= TINYGLTF_COMPONENT_TYPE_UNSIGNED_SHORT)
+            bytesPerIndex = sizeof(uint16_t);
+        else if (indexAccessor.componentType >= TINYGLTF_COMPONENT_TYPE_INT && indexAccessor.componentType <= TINYGLTF_COMPONENT_TYPE_UNSIGNED_INT)
+            bytesPerIndex = sizeof(uint32_t);
+        else if (indexAccessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT)
+            bytesPerIndex = sizeof(float);
+        else if (indexAccessor.componentType == TINYGLTF_COMPONENT_TYPE_DOUBLE)
+            bytesPerIndex = sizeof(double);
+
         NSData *indexData = [NSData dataWithBytes:indexBuffer.data.data() + indexBufferView.byteOffset + indexAccessor.byteOffset length:indexAccessor.count * bytesPerIndex];
         NSInteger indexCount = indexAccessor.count;
         NSInteger primitiveCount = TinyGLTFPrimitiveCountForIndexCount(indexCount, primitiveType);
