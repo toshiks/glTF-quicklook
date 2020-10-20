@@ -28,3 +28,6 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# ignore macOS artifacts
+.DS_Store
