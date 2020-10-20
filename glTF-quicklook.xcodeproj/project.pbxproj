@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -198,8 +198,8 @@
 		2744672421B1F39100E8338E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Klochkov Anton";
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					2744672C21B1F39100E8338E = {
 						CreatedOnToolsVersion = 10.1;
@@ -207,7 +207,7 @@
 				};
 			};
 			buildConfigurationList = 2744672721B1F39100E8338E /* Build configuration list for PBXProject "glTF-quicklook" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -281,6 +281,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -341,6 +342,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -380,14 +382,15 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INPUT_FILETYPE = automatic;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/draco/1.3.5/include;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/draco/1.3.6/include;
 				INFOPLIST_FILE = "$(SRCROOT)/glTF-quicklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/draco/1.3.5/lib,
+					/usr/local/Cellar/draco/1.3.6/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-quicklook";
@@ -409,14 +412,15 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INPUT_FILETYPE = automatic;
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/draco/1.3.5/include;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/draco/1.3.6/include;
 				INFOPLIST_FILE = "$(SRCROOT)/glTF-quicklook/Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks/";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/draco/1.3.5/lib,
+					/usr/local/Cellar/draco/1.3.6/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ITS.glTF-quicklook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
